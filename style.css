@@ -1,0 +1,59 @@
+@charset "UTF-8";
+/*
+Theme Name: Theme Couveuse
+Theme URI: 
+Author: DUBIEF Gianni
+Author URI: 
+Description: 2021 thème la couveuse
+Requires at least: 4.9.6
+Requires PHP: 5.2.4
+Version: 1.0
+License: 
+License URI: 
+Text Domain: twentynineteen
+Tags: 
+
+*/
+
+
+/*=============================================
+=            Police            =
+=============================================*/
+
+
+
+
+
+
+/*=====  End of Police  ======*/
+
+
+
+
+/*=============================================
+=            Common            =
+=============================================*/
+
+
+
+/*=====  End of Common  ======*/
+
+
+
+/*=============================================
+=            Entête accueil            =
+=============================================*/
+.imgTop{
+    height: 50vh;
+    background-size: center;
+}
+
+.box{
+    height: 50vh;
+}
+
+
+/*=====  End of Entête accueil  ======*/
+
+
+
