@@ -49,7 +49,7 @@ $today = date("Y");?>
   <div class="row justify-content-center text-center mt-4">
       <?php for ($i=0; $i < count($sponso); $i++){
      echo ' <div class="col-6 col-md-4 col-lg-3 mt-4 p-0">
-     <img src="'.$sponso[$i]['sponso-img'].'" class="img-fluid" alt="..." style="width= 150px height=58px">
+     <img src="'.$sponso[$i]['sponso-img'].'" class="img-fluid" alt="'.$sponso[$i]['description-logo'].'" style="width= 150px height=58px">
      </div>';
    }?>
       

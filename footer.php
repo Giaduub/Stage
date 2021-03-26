@@ -31,6 +31,8 @@
 
 <script src="<?= site_url()."/wp-content/themes/".get_template()."/javascript/slider.js"; ?>">
     </script>
+    <script src="<?= site_url()."/wp-content/themes/".get_template()."/javascript/menu.js"; ?>">
+    </script>
 </body>
 
 </html>
