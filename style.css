@@ -76,6 +76,7 @@ font-size: 4vh;
 
 .top-line-black{
   width: 150px;
+  border-radius: 5px;
 border-top: 4px solid black;
 }
 
@@ -89,8 +90,8 @@ border-top: 4px solid black;
 =            Entête accueil            =
 =============================================*/
 .imgtop{
-  min-height: 100vh;
-  max-height: 100vh;
+  min-height: 50vh;
+  max-height: 50vh;
   background-color: pink;
   position: relative;
   z-index: 1;

@@ -2,23 +2,31 @@
 
 <?php get_header(); ?>
 <?php $sponso = get_field('sponsor'); 
-$today = date("Y");?>
+$today = date("Y");
+$imgtop = get_field('image-top'); ?>
 
 
 <!-- Image top Header  -->
 <div class="container-fluid imgtop"> 
   <a href="#" class="contactez bottom-line white t1"> Contactez-nous</a>
-  <div class="row">
-    <div class="col-12">
-         
-    </div>
-  </div>
+  
 </div>
+<style><?php $imgTop = get_field('image-top');
+      echo '.imgtop{
+        background-image:url('.$imgtop.');
+        background-size: center;
+        max-width:1880px;
+        background-repeat: no-repeat;
+      }'
+       ?></style>
 
 
 <!-- Double box  -->
 <div class="container-fluid">
   <div class="row align-self-stretch">
+  <div class="row">
+  <div class="col-12 box0">
+  </div></div>
     <div class="col-sm-12 col-md-6 col-lg-6 box1">
 
     </div>
@@ -57,4 +65,10 @@ $today = date("Y");?>
 
   </div>
 </div>
+
+<style>
+.box0{
+  background-color:green;
+} </style>
+
 <?php get_footer(); ?>
