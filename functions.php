@@ -2,6 +2,8 @@
 
 
 
+
+
 function wpc_theme_support() {
     add_theme_support('custom-logo', array(
     'flex-height' => true,

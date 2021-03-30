@@ -33,6 +33,8 @@
     </script>
     <script src="<?= site_url()."/wp-content/themes/".get_template()."/javascript/menu.js"; ?>">
     </script>
+    <script src="<?= site_url()."/wp-content/themes/".get_template()."/javascript/collapse.js"; ?>">
+    </script>
 </body>
 
 </html>

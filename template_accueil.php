@@ -14,11 +14,12 @@ $imgtop = get_field('image-top'); ?>
 <style><?php $imgTop = get_field('image-top');
       echo '.imgtop{
         background-image:url('.$imgtop.');
-        background-size: center;
-        max-width:1880px;
         background-repeat: no-repeat;
-      }'
+        background-position:center;
+      }
+      '
        ?></style>
+
 
 
 <!-- Double box  -->
