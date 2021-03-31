@@ -25,14 +25,57 @@
 
 
 <section class="contact ">
-   <div class="container  ">
-        <div class="row justify-content-center">
-            <div class="text-center col-12 ">
-            
+  <div class="container contact-fond mt-4 mb-4">
                 <?php the_content(); ?>
             </div>
-        </div>
-   </div>
 </section>
+
+<style>
+    .contact-fond{
+        padding-top:50px;
+        padding-bottom:50px;
+        background:white;
+        border-radius:1%;
+    }
+
+  /* Contact Form 7 Styles
+---------------------------------*/
+
+
+ .wpcf7-form {
+ 
+ margin-left: 25px;
+  
+ margin-right: 25px;
+  
+ margin-top: 25px;
+}
+
+.wpcf7-textarea {
+ 
+ min-width: 100%;
+  
+ }
+
+label{
+    width:100%;
+}
+
+ .wpcf7-submit {
+ 
+ background: #E0272B;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 16px;
+  
+ }
+   
+</style>
 
 <?php get_footer(); ?>

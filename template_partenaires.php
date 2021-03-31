@@ -19,7 +19,7 @@ $raiponce = get_field('lesquestions');?>
   <hr class="top-line-black mt-4">
 <div class="row">
 <div class="col-12">
-<h2 class='text-center mt-2'> Nos partenaires : ils nous accompagnent en <?= $today ?> </h2>
+<h2 class='text-center mt-2'> Nos sponsors : ils nous soutiennent en <?= $today ?> </h2>
 </div>
 </div>
   <div class="row justify-content-center text-center mt-4">
@@ -38,7 +38,7 @@ $raiponce = get_field('lesquestions');?>
   <hr class="top-line-black mt-4">
 <div class="row">
 <div class="col-12">
-<h2 class='text-center mt-2'> Nos sponsors : ils nous accompagnent en <?= $today ?> </h2>
+<h2 class='text-center mt-2'> Nos partenaires : ils nous accompagnent en <?= $today ?> </h2>
 </div>
 </div>
   <div class="row justify-content-center text-center mt-4">
@@ -57,11 +57,13 @@ $raiponce = get_field('lesquestions');?>
 
 
 
+
+
  <div class="container pb-4">
  <div class="row">
  <?php for ($i=0; $i < count($raiponce); $i++){
      echo '
-     <div class="col-6"><button type="button" class="collapsible mt-4">'.$raiponce[$i]['question'].'</button>
+     <div class="col-12 col-md-6 col-lg-6"><button type="button" class="collapsible mt-4">'.$raiponce[$i]['question'].'</button>
      <div class="content">
      <p>'.$raiponce[$i]['reponse'].'</p></div></div>';
    }?>

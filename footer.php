@@ -18,7 +18,7 @@
             <a href="#">Contact</a>
             </div>
             <div class="col-sm-12 col-md-2 col-lg-2">
-                <a href="#">Politique de confidentialité</a>
+                <a href="<?= site_url()."/nos-experts";?>">Politique de confidentialité</a>
             </div>
         </div>
     </div>
