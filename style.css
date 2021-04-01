@@ -114,10 +114,28 @@ border-top: 4px solid black;
   z-index: 5;
 }
 
+.red-top img{
+  height:10%;
+  position:absolute;
+  top:5px;
+  right:5px;
+}
 
+.red-middle{
+  padding-top:10%;
+  padding-bottom:10%;
+}
+
+.red-bottom img{
+  position:absolute;
+  bottom:5px;
+  left:5px;
+  height:10%;
+}
 
 .box1{
-  min-height: 50vh;
+  min-height:50vh;
+  height: 100%;
   background-color: #E0272B;
 }
 
@@ -232,16 +250,24 @@ background-color: white;
 }
 
 .cross:after {
-content: '\02795'; /* Unicode character for "plus" sign (+) */
-font-size: 13px;
+content: '+'; /* Unicode character for "plus" sign (+) */
+font-size: 20px;
+padding-left: 10px;
+padding-right: 10px;
+border: none;
 color: white!important;
-background-color: white;
+background-color: rgba(255, 255, 255, 0);
 float: right;
 margin-left: 5px;
 }
 
 .cross.active:after {
-content: "\2796"; /* Unicode character for "minus" sign (-) */
+content: "-"; /* Unicode character for "minus" sign (-) */
+font-size: 20px;
+color: white!important;
+float: right;
+margin-left: 5px;
+
 }
 
 
@@ -278,6 +304,17 @@ footer{
 /*=====  End of Footer  ======*/
 
 
+
+
+/*=============================================
+=            Cookie            =
+=============================================*/
+
+.cookie{
+  position:absolute;
+}
+
+/*=====  End of Cookie  ======*/
 
 
 

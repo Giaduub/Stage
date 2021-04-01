@@ -16,13 +16,27 @@ $tab = get_field('expert');?>
       '
        ?></style>
 
+
+
 <div class="container-fluid ">
     <div class="row align-items-center fond-page ">
         <div class="  col-12 ">
+          <div class="banniere-top"><img src="wp-content/themes/base/img/haut-img.png" alt=""></div>
+          <div class="banniere-mid"></div>
+          <div class="banniere-bottom"></div>
             <h1 class="text-center white "> <?= wp_title() ?> </h1>
         </div>
     </div>
 </div>
+
+<style>
+  .banniere-top img{
+    height:10%;
+  position:absolute;
+  top:5px;
+  right:5px;
+  }
+</style>
 
 <section class="expert">
 
