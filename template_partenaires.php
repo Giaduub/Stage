@@ -6,7 +6,7 @@
 $today = date("Y"); 
 $raiponce = get_field('lesquestions');?>
 
-
+<!-- Banner -->
 <div class="container-fluid ">
     <div class="row align-items-center fond-page ">
         <div class="  col-12 ">
@@ -14,7 +14,9 @@ $raiponce = get_field('lesquestions');?>
         </div>
     </div>
 </div>
+<!-- End Banner -->
 
+<!-- Sponsors -->
 <div class="container-fluid sponsor">
   <hr class="top-line-black mt-4">
 <div class="row">
@@ -33,7 +35,9 @@ $raiponce = get_field('lesquestions');?>
 
   </div>
 </div>
+<!-- End  -->
 
+<!-- Partenaires -->
 <div class="container-fluid sponsor">
   <hr class="top-line-black mt-4">
 <div class="row">
@@ -52,23 +56,23 @@ $raiponce = get_field('lesquestions');?>
 
   </div>
 </div>
+<!-- End -->
 
 
 
 
 
-
-
+<!-- Questions  -->
  <div class="container pb-4">
  <div class="row">
  <?php for ($i=0; $i < count($raiponce); $i++){
      echo '
-     <div class="col-12 col-md-6 col-lg-6"><button type="button" class="collapsible mt-4">'.$raiponce[$i]['question'].'</button>
+     <div class="col-12 col-md-6 col-lg-6"><button type="button" class="collapsible cross ubuntubold mt-4">'.$raiponce[$i]['question'].'</button>
      <div class="content">
      <p>'.$raiponce[$i]['reponse'].'</p></div></div>';
    }?>
    </div></div>
-
+<!-- End -->
 
 
 

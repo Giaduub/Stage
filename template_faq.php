@@ -36,7 +36,7 @@
         <div class="row">
             <?php for ($i=0; $i < count($raiponce); $i++){
      echo '
-     <div class="col-11"><button type="button" class="text-center collapsible cross">'.$raiponce[$i]['question'].'</button>
+     <div class="col-11"><button type="button" class="text-center collapsible cross ubuntubold">'.$raiponce[$i]['question'].'</button>
      <div class="content">
      <p class="ubuntubold mt-4">'.$raiponce[$i]['reponse'].'</p></div></div>';
    }?>

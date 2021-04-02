@@ -5,7 +5,7 @@
 <?php $imgtop = get_field('bg-image');
 $tab = get_field('expert');?>
 
-
+<!--  Background Style with ACF -->
 <style><?php $imgTop = get_field('bg-image');
       echo 'body{
           left:-20%;
@@ -16,8 +16,9 @@ $tab = get_field('expert');?>
       '
        ?></style>
 
+<!-- End -->
 
-
+<!-- Banner -->
 <div class="container-fluid ">
     <div class="row align-items-center fond-page ">
         <div class="  col-12 ">
@@ -28,8 +29,10 @@ $tab = get_field('expert');?>
         </div>
     </div>
 </div>
+<!-- End -->
 
 <style>
+
   .banniere-top img{
     height:10%;
   position:absolute;
@@ -38,6 +41,7 @@ $tab = get_field('expert');?>
   }
 </style>
 
+<!-- Tab -->
 <section class="expert">
 
 
@@ -45,12 +49,13 @@ $tab = get_field('expert');?>
 <table class="table table-dark">
   <thead class="text-center">
     <tr>
-      <th scope="col-2">Nom</th>
-      <th scope="col-6">Compétences</th>
-      <th scope="col-4">Mail</th>
+      <th scope="col-2 ">Nom</th>
+      <th scope="col-6 ">Compétences</th>
+      <th scope="col-4 ">Mail</th>
     </tr>
   </thead>
   <tbody class='text-center'>
+    <!-- Loop Tab // td -->
     <?php for ($i=0; $i < count($tab); $i++){
      echo ' <tr><td>'.$tab[$i]['nom'].'</td>
      <td>'.$tab[$i]['competences'].'</td>
@@ -59,20 +64,15 @@ $tab = get_field('expert');?>
    </svg></a></td>
      </tr>';
    }?>
+   <!-- End -->
   
   </tbody>
 </table>
 </div>
 
 </section>
+<!-- End -->
 
 
-<style>
-.expert{
-    min-height:100vh;
-    }
-    
-    body{
-        font-family:'ubuntu';
-    }</style>
+
 <?php get_footer(); ?> 

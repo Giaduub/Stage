@@ -31,30 +31,35 @@ background-image:url('.$imgtop.');
   <div class="row align-self-stretch">
 
 
-
-    <div class="col-sm-12 col-md-6 col-lg-6 box1 ">
+<!-- First box -->
+    <div class="col-sm-12 col-md-12 col-lg-6 box1 ">
       <div class="red-top"><img src="wp-content/themes/base/img/haut-img.png" alt=""></div>
       <div class="red-middle ">
-        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquid nemo repudiandae fugit autem nostrum
-          doloremque voluptatibus facere eligendi numquam laboriosam id dolores sit minus quisquam ut quaerat,
-          necessitatibus tempore nihil.
-          Consequatur ea corporis quidem dignissimos optio eaque, blanditiis quam dolores velit unde mollitia, officia
-          aut quibusdam recusandae explicabo odio impedit, rerum dicta accusamus? Voluptates nesciunt, rerum commodi
-          iusto explicabo voluptatibus?
-          Quod repellat magnam sunt! Voluptates necessitatibus nulla ullam delectus nemo quaerat est voluptate labore
-          atque illum facilis molestias voluptas tenetur magnam facere debitis, earum commodi error possimus ipsam
-          exercitationem vero!
-          Sequi quisquam cum veniam accusamus laborum necessitatibus vero illum, ab officia praesentium nulla maiores
-          ipsam ipsa laudantium est doloribus itaque dolor et? Quam quaerat minus sapiente voluptatem nesciunt sunt
-          asperiores!</p>
+      <hr class="top-line-white ">
+      <h2 class='text-center mb-2 ubuntubold white'> Qui sommes-nous ? </h2>
+      <div class="row mb-2 justify-content-center">
+        <div class="col-11 col-md-8 col-lg-7 "><p class="mt-2 text-center white ">La Couveuse des Innovateurs est une association née dans le prolongement du Hacking
+Health de Besançon, afin de soutenir le développement des projets qui y ont pris corps. Il
+s’agit d’apporter une aide concrète aux professionnels de santé, patients ou aidants qui
+souhaitent développer un projet innovant, sans avoir forcément l’envie de créer une startup.
+Or s’il existe de nombreux dispositifs pour accompagner les futurs créateurs d’entreprise, les
+porteurs de projets issus du marathon d’innovation sont souvent démunis. La Couveuse des
+Innovateurs est là pour leur permettre de mûrir leur projet, le protéger, se former et
+s’informer, trouver les bons partenaires, la bonne voie pour faire prospérer leur idée et lui
+donner les meilleures chances de se concrétiser.</p></div></div>
       </div>
       <div class="red-bottom"><img src="wp-content/themes/base/img/bas-img.png" alt=""></div>
     </div>
-    <div class="col-sm-12 col-md-6 col-lg-6 box2">
+
+    <!-- end first box -->
+
+    <!-- Second box - Slider  -->
+    <div class="col-sm-12 col-md-12 col-lg-6 box2">
 
 
     </div>
   </div>
+  <!-- End  -->
 </div>
 
 
@@ -66,6 +71,7 @@ background-image:url('.$imgtop.');
     </div>
   </div>
 </div>
+<!-- end agenda  -->
 
 <!-- Sponsors -->
 <div class="container-fluid sponsor">
@@ -86,7 +92,7 @@ background-image:url('.$imgtop.');
 
 </div>
 </div>
-
+<!-- end sponsors -->
 <style>
   .box0 {
     background-color: green;

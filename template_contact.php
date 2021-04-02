@@ -5,6 +5,7 @@
 <?php $imgtop = get_field('bg-image');?>
 
 
+<!-- Background style with ACF -->
 <style>
     <?php $imgTop=get_field('bg-image');
     echo 'body{
@@ -16,7 +17,9 @@
     '
 ?>
 </style>
+<!-- End -->
 
+<!-- Banner -->
 <div class="container-fluid ">
     <div class="row align-items-center fond-page ">
         <div class="  col-12 ">
@@ -24,8 +27,9 @@
         </div>
     </div>
 </div>
+<!-- End -->
 
-
+<!-- Contact -->
 <section class="contact ">
     <div class="container contact-fond mt-4 mb-4">
         <div class="row">
@@ -66,6 +70,7 @@
 
     </div>
 </section>
+<!-- End  -->
 
 <style>
 

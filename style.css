@@ -50,7 +50,7 @@ a:hover{
 }
 
 .t1{
-font-size: 4vh;
+font-size: 3vh;
 }
 
 .t2{
@@ -62,7 +62,7 @@ font-size: 4vh;
 }
 
 .black{
-    color: black;
+    color: black!important;
 }
 
 .fond-page{
@@ -76,6 +76,12 @@ font-size: 4vh;
 
 .bottom-line{
   border-bottom: 5px solid white;
+}
+
+.top-line-white{
+  width: 150px;
+  border-radius: 5px;
+border-top: 4px solid white;
 }
 
 .top-line-black{
@@ -103,7 +109,7 @@ border-top: 4px solid black;
 
 @media(max-width:840px){
   .contactez{
-    font-size: 2.2vh;
+    font-size: 1.5vh;
   }
 }
 
@@ -207,7 +213,7 @@ border-top: 4px solid black;
 =============================================*/
 
 .faq{
-  min-height: 50vh;
+  min-height: 84vh;
 }
 
 /*=====  End of FAQ  ======*/
@@ -218,7 +224,8 @@ border-top: 4px solid black;
 =            Collapse            =
 =============================================*/
 
-/* Style the button that is used to open and close the collapsible content */
+
+/* Button style */
 .collapsible {
   font-family: 'ubuntu';
 background-color: #E0272B ;
@@ -235,12 +242,12 @@ border:1px solid white;
 
 
 
-/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+/* hover color */
 .active, .collapsible:hover {
 background-color: #E0272B ;
 }
 
-/* Style the collapsible content. Note: hidden by default */
+/* Style content  */
 .content {
 padding: 0 18px;
 display: none;
@@ -250,7 +257,7 @@ background-color: white;
 }
 
 .cross:after {
-content: '+'; /* Unicode character for "plus" sign (+) */
+content: '+'; 
 font-size: 20px;
 padding-left: 10px;
 padding-right: 10px;
@@ -262,7 +269,7 @@ margin-left: 5px;
 }
 
 .cross.active:after {
-content: "-"; /* Unicode character for "minus" sign (-) */
+content: "-"; 
 font-size: 20px;
 color: white!important;
 float: right;
@@ -286,6 +293,32 @@ margin-left: 5px;
 
 
 /*=====  End of Contact  ======*/
+
+
+/*=============================================
+=            Nos Experts            =
+=============================================*/
+thead{
+  background: #E0272B!important;
+}
+td{
+  background:white!important;
+  color: black!important;
+}
+path{
+color:black!important;
+}
+
+.expert{
+  min-height:72vh;
+  }
+  
+  body{
+      font-family:'ubuntu';
+  }
+
+/*=====  End of Nos Experts  ======*/
+
 
 
 
