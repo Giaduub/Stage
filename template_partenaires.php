@@ -16,8 +16,10 @@ $raiponce = get_field('lesquestions');?>
 </div>
 <!-- End Banner -->
 
+
+
 <!-- Sponsors -->
-<div class="container-fluid sponsor">
+<div class="container-fluid sponsor mb-4">
   <hr class="top-line-black mt-4">
 <div class="row">
 <div class="col-12">
@@ -38,7 +40,7 @@ $raiponce = get_field('lesquestions');?>
 <!-- End  -->
 
 <!-- Partenaires -->
-<div class="container-fluid sponsor">
+<div class="container-fluid sponsor mb-4">
   <hr class="top-line-black mt-4">
 <div class="row">
 <div class="col-12">
@@ -60,10 +62,8 @@ $raiponce = get_field('lesquestions');?>
 
 
 
-
-
 <!-- Questions  -->
- <div class="container pb-4">
+<div class="container pb-4">
  <div class="row">
  <?php for ($i=0; $i < count($raiponce); $i++){
      echo '
@@ -75,5 +75,26 @@ $raiponce = get_field('lesquestions');?>
 <!-- End -->
 
 
+
+<div class="container">
+<div class="row justify-content-center">
+<div class="col-11 mt-4 mb-4">
+<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ratione vel doloremque beatae soluta iste eius doloribus tempora a tenetur, eligendi ipsum assumenda sed velit repudiandae illo. Aperiam tenetur sequi maxime.</p></div></div>
+<div class="row justify-content-center">
+<div class="col-8 col-md-6 col-lg-4 mb-4">
+<button class="candidat"><a href="mailto:test@test.fr">Envoyer une candidature</button></div></div></div>
+
+<style>
+  .candidat{background: #E0272B;
+        border: none;
+        color: white;
+        padding: 10px 20px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        margin: 4px 2px;
+        cursor: pointer;
+        border-radius: 16px;}
+        </style>
 
 <?php get_footer(); ?>

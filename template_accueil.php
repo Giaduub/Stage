@@ -3,7 +3,8 @@
 <?php get_header(); ?>
 <?php $sponso = get_field('sponsor'); 
 $today = date("Y");
-$imgtop = get_field('image-top'); ?>
+$imgtop = get_field('image-top'); 
+$about = get_field('about-us');?>
 
 
 <!-- Image top Header  -->
@@ -38,15 +39,7 @@ background-image:url('.$imgtop.');
       <hr class="top-line-white ">
       <h2 class='text-center mb-2 ubuntubold white'> Qui sommes-nous ? </h2>
       <div class="row mb-2 justify-content-center">
-        <div class="col-11 col-md-8 col-lg-7 "><p class="mt-2 text-center white ">La Couveuse des Innovateurs est une association née dans le prolongement du Hacking
-Health de Besançon, afin de soutenir le développement des projets qui y ont pris corps. Il
-s’agit d’apporter une aide concrète aux professionnels de santé, patients ou aidants qui
-souhaitent développer un projet innovant, sans avoir forcément l’envie de créer une startup.
-Or s’il existe de nombreux dispositifs pour accompagner les futurs créateurs d’entreprise, les
-porteurs de projets issus du marathon d’innovation sont souvent démunis. La Couveuse des
-Innovateurs est là pour leur permettre de mûrir leur projet, le protéger, se former et
-s’informer, trouver les bons partenaires, la bonne voie pour faire prospérer leur idée et lui
-donner les meilleures chances de se concrétiser.</p></div></div>
+        <div class="col-11 col-md-8 col-lg-7 "><p class="mt-2 text-center white "><?= $about ?></p></div></div>
       </div>
       <div class="red-bottom"><img src="wp-content/themes/base/img/bas-img.png" alt=""></div>
     </div>
@@ -93,6 +86,8 @@ donner les meilleures chances de se concrétiser.</p></div></div>
 </div>
 </div>
 <!-- end sponsors -->
+
+
 <style>
   .box0 {
     background-color: green;

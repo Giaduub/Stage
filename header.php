@@ -21,10 +21,24 @@
 
 
   <div class="topnav" id="myTopnav">
+    
   <a href="#home" class="active">Home</a>
-  <a href="#news">News</a>
-  <a href="#contact">Contact</a>
-  <a href="#about">About</a>
+  <?php
+          wp_nav_menu( array(
+          'container' =>'li',
+          'class' =>'bangers',
+          'theme_location' => '',
+          'menu_id' => '',
+          'echo' => true,
+          'before' => '',
+          'after' => '',
+          'link_before' => '',
+          'link_after' => '',
+          'depth' => 0,
+          'items_wrap' => '%3$s',
+          'walker' => '')
+          );
+          ?>
   <a href="javascript:void(0);" class="icon" onclick="myFunction()">
     <i class="fa fa-bars"></i>
   </a>
@@ -34,49 +48,111 @@
 
 
 <style>
+.topnav li{
+  list-style: none;
+}
+.topnav a{
+  color:black!important;
+
+}
+ /* Effect 1: Brackets */
+ .topnav li::before,
+  .topnav li::after {
+	display: inline-block;
+	opacity: 0;
+	-webkit-transition: -webkit-transform 0.3s, opacity 0.2s;
+	-moz-transition: -moz-transform 0.3s, opacity 0.2s;
+	transition: transform 0.3s, opacity 0.2s;
+}
+
+.topnav li::before {
+	margin-right: 10px;
+	content: '[';
+  color: #E0272B;
+	-webkit-transform: translateX(20px);
+	-moz-transform: translateX(20px);
+	transform: translateX(20px);
+}
+
+.topnav li::after {
+	margin-left: 10px;
+	content: ']';
+  color: #E0272B;
+	-webkit-transform: translateX(-20px);
+	-moz-transform: translateX(-20px);
+	transform: translateX(-20px);
+}
+
+.topnav li:hover::before,
+.topnav li:hover::after,
+.topnav li:focus::before,
+.topnav li:focus::after {
+	opacity: 1;
+	-webkit-transform: translateX(0px);
+	-moz-transform: translateX(0px);
+	transform: translateX(0px);
+}
 
 
 
 /* Add a black background color to the top navigation */
 .topnav {
-  background-color: #333;
+  background-color: white;
+  position: sticky;
+  top:0.000001%;
   overflow: hidden;
-  position:sticky;
-  top:0.001px;
-  z-index:5000;
+  z-index: 9999;
 }
 
 /* Style the links inside the navigation bar */
-.topnav a {
+.topnav .active {
   float: left;
   display: block;
-  color: #f2f2f2;
+  color: white!important;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
   font-size: 17px;
+  
+}
+.topnav li {
+  float: right;
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  
 }
 
+
 /* Change the color of links on hover */
-.topnav a:hover {
+.topnav li:hover {
   background-color: #ddd;
-  color: black;
+
+}
+
+
+
+.topnav li>a:hover{
+  color:#E0272B!important;
 }
 
 /* Add an active class to highlight the current page */
-.topnav a.active {
-  background-color: #4CAF50;
+.topnav a.active li.active {
+  background-color: #E0272B;
   color: white;
 }
 
 /* Hide the link that should open and close the topnav on small screens */
 .topnav .icon {
   display: none;
+  color: #E0272B;
 }
-
 /* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
 @media screen and (max-width: 600px) {
-  .topnav a:not(:first-child) {display: none;}
+  .topnav li:not(:first-child) {display: none;}
   .topnav a.icon {
     float: right;
     display: block;
@@ -88,14 +164,16 @@
   .topnav.responsive {position: sticky;}
   .topnav.responsive a.icon {
     position: sticky;
+  top:0.000001%;
     right: 0;
-    top: 0.01%;
+    top: 0;
   }
-  .topnav.responsive a {
+  .topnav.responsive li {
     float: none;
     display: block;
     text-align: left;
   }
 }
+
 
 </style>
