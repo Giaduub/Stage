@@ -2,48 +2,29 @@
 
 <?php get_header(); ?>
 
+<div class="col-sm-12 col-md-12 col-lg-6 box1 ">
+      <div class="red-top"><img src="<?= get_template_directory_uri()?>/img/haut-img.png" alt=""></div>
+      <div class="red-middle ">
+      <hr class="top-line-white ">
+      <h2 class='text-center mb-2 ubuntubold white'> Qui sommes-nous ? </h2>
+      <div class="row mb-2 justify-content-center">
+        <div class="col-11 col-md-8 col-lg-7 "><p class="mt-2 text-center white "><?= $about ?></p></div></div>
+      </div>
+      <div class="red-bottom"><img src="<?= get_template_directory_uri()?>/img/bas-img.png" alt=""></div>
+    </div>
 
-Je suis sur la page about
+    <!-- end first box -->
 
-
-<?php 
-$image = get_field('image_de_presentation'); 
-
-
-echo "<img src='".$image."' />";
-
-?>
-
-
-<a href="<?php echo get_field('lien_bouton_contactez_moi'); ?>" class="">
-    <span class="intitule">
-        <?php echo get_field('intitule_bouton_contactez_moi'); ?>
-    </span>
-</a>
-5
-
-<?php
-    $args = array( 'post_type' => 'post', 'posts_per_page' => 8 );
+    <!-- Second box - Slider  -->
+    <div class="col-sm-12 col-md-12 col-lg-6 box2">
 
 
-	$loop = new WP_Query( $args );
-	
-		while ( $loop->have_posts() ) : $loop->the_post();
-	echo "<li>";
-        echo '<a href="'.get_permalink().'">';	
-
-                echo the_title();
-                $image = get_field('image_realisation'); 
-                echo "<img src='".$image."' />";
-			echo '</a>';
-            echo "</li>";
-		
-    	endwhile;
-
-	
+    </div>
+  </div>
+  <!-- End  -->
+</div>
 
 
-	?>
 
 
 <?php get_footer(); ?>

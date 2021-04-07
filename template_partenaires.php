@@ -84,17 +84,6 @@ $raiponce = get_field('lesquestions');?>
 <div class="col-8 col-md-6 col-lg-4 mb-4">
 <button class="candidat"><a href="mailto:test@test.fr">Envoyer une candidature</button></div></div></div>
 
-<style>
-  .candidat{background: #E0272B;
-        border: none;
-        color: white;
-        padding: 10px 20px;
-        text-align: center;
-        text-decoration: none;
-        display: inline-block;
-        margin: 4px 2px;
-        cursor: pointer;
-        border-radius: 16px;}
-        </style>
+
 
 <?php get_footer(); ?>

@@ -5,19 +5,19 @@ function wpm_custom_post_type() {
 	// On rentre les différentes dénominations de notre custom post type qui seront affichées dans l'administration
 	$labels = array(
 		// Le nom au pluriel
-		'name'                => _x( 'Réalisations', 'Post Type General Name'),
+		'name'                => _x( 'Projets', 'Post Type General Name'),
 		// Le nom au singulier
-		'singular_name'       => _x( 'Réalisation', 'Post Type Singular Name'),
+		'singular_name'       => _x( 'Projet', 'Post Type Singular Name'),
 		// Le libellé affiché dans le menu
-		'menu_name'           => __( 'Portfolio'),
+		'menu_name'           => __( 'Projet'),
 		// Les différents libellés de l'administration
-		'all_items'           => __( 'Toutes les réalisations'),
-		'view_item'           => __( 'Voir les réalisations'),
-		'add_new_item'        => __( 'Ajouter une nouvelle réalisation'),
-		'add_new'             => __( 'Ajouter une réalisation'),
-		'edit_item'           => __( 'Editer la réalisation'),
-		'update_item'         => __( 'Modifier la réalisation'),
-		'search_items'        => __( 'Rechercher une réalisation'),
+		'all_items'           => __( 'Tous les projets'),
+		'view_item'           => __( 'Voir les projets'),
+		'add_new_item'        => __( 'Ajouter un nouveau projet'),
+		'add_new'             => __( 'Ajouter un projet'),
+		'edit_item'           => __( 'Editer le projet'),
+		'update_item'         => __( 'Modifier le projet'),
+		'search_items'        => __( 'Rechercher un projet'),
 		'not_found'           => __( 'Non trouvée'),
 		'not_found_in_trash'  => __( 'Non trouvée dans la corbeille'),
 		'featured_image'        => __( 'Featured Image', 'text_domain' ),
@@ -34,8 +34,8 @@ function wpm_custom_post_type() {
 	// On peut définir ici d'autres options pour notre custom post type
 	
 	$args = array(
-		'label'               => __( 'Réalisations'),
-		'description'         => __( 'Tous sur réalisations'),
+		'label'               => __( 'Projets'),
+		'description'         => __( 'Tous sur projets'),
 		'labels'              => $labels,
 		// On définit les options disponibles dans l'éditeur de notre custom post type ( un titre, un auteur...)
 		'supports'            => array( 'title', 'editor', 'slug', 'comments', 'thumbnail', 'revisions', 'custom-fields', ),
@@ -46,12 +46,12 @@ function wpm_custom_post_type() {
 		'hierarchical'        => false,
 		'public'              => true,
 		'has_archive'         => true,
-		'rewrite'			  => array( 'slug' => 'portfolio'),
+		'rewrite'			  => array( 'slug' => 'projet'),
 
 	);
 	
 	// On enregistre notre custom post type qu'on nomme ici "portfolio" et ses arguments
-	register_post_type( 'portfolio', $args );
+	register_post_type( 'projet', $args );
 
 }
 

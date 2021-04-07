@@ -25,7 +25,7 @@
   <a href="#home" class="active">Home</a>
   <?php
           wp_nav_menu( array(
-          'container' =>'li',
+          'container' =>'nav',
           'class' =>'bangers',
           'theme_location' => '',
           'menu_id' => '',
@@ -39,7 +39,8 @@
           'walker' => '')
           );
           ?>
-  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+          <li id="menu-item-230"class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2030">
+  <a href="javascript:void(0);" class="icon" onclick="myFunction()"></li>
     <i class="fa fa-bars"></i>
   </a>
 </div>
@@ -153,7 +154,7 @@
 /* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
 @media screen and (max-width: 600px) {
   .topnav li:not(:first-child) {display: none;}
-  .topnav a.icon {
+  .topnav li.icon {
     float: right;
     display: block;
   }
@@ -162,7 +163,7 @@
 /* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
 @media screen and (max-width: 600px) {
   .topnav.responsive {position: sticky;}
-  .topnav.responsive a.icon {
+  .topnav.responsive li.icon {
     position: sticky;
   top:0.000001%;
     right: 0;

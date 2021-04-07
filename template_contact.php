@@ -47,62 +47,6 @@ background-image:url('.$imgtop.');
                         </div>
                     </section>
                     <!-- End -->
-                        <style>
-
-                            .contact-fond {
-                                padding-top: 50px;
-                                padding-bottom: 50px;
-                                background: white;
-                                border-radius: 1%;
-                            }
-
-                            .adresse {
-                                margin-top: 50px;
-                                margin-bottom: 50px;
-                            }
-
-                            /* Contact Form 7 Styles
----------------------------------*/
-
-
-                            .wpcf7-form input[type="text"],
-                            input[type="email"],
-                            input[type="url"],
-                            input[type="password"],
-                            input[type="search"],
-                            input[type="number"],
-                            input[type="tel"],
-                            input[type="range"],
-                            input[type="date"],
-                            input[type="month"],
-                            input[type="week"],
-                            input[type="time"],
-                            input[type="datetime"],
-                            input[type="datetime-local"],
-                            input[type="color"],
-                            select,
-                            textarea {
-                                width: 100% !important;
-                                background: rgba(224, 39, 43, 0.4);
-                                border-style:none;
-                            }
-
-                            .wpcf7-submit {
-                                font-weight:bold;
-                                background: #E0272B;
-                                width:200px;
-                                border: none;
-                                color: white;
-                                font-size:22px;
-                                padding: 10px 20px;
-                                text-align: center;
-                                text-decoration: none;
-                                display: inline-block;
-                                margin: 4px 2px;
-                                cursor: pointer;
-                                border-radius: 16px;
-
-                            }
-                        </style>
+                      
                         <?php get_footer();
 ?>
