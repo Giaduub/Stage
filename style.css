@@ -65,10 +65,10 @@ font-size: 3vh;
     color: black!important;
 }
 
-.fond-page{
-  background-color:#E0272B ;
-  height: 10vh;
+.red{
+  color:#E0272B;
 }
+
 
 .top-line{
   border-top: 4px solid black ;
@@ -89,6 +89,43 @@ border-top: 4px solid white;
   border-radius: 5px;
 border-top: 4px solid black;
 }
+
+
+/*=============================================
+=            Banner             =
+=============================================*/
+.bord-title{
+  border-top: 1.2mm solid rgb(255, 255, 255, 1);
+  border-radius:5% 5% 5% 5%;
+}
+
+.fond-page{
+  background-color:#E0272B ;
+  height: 12vh;
+}
+  .banner-top img {
+    height: 35%;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+  }
+
+  .banner-middle {
+    margin-top: -20px;
+    height: 5vh;
+  }
+
+  .raid-bottom img{
+  position:absolute;
+  bottom:5px;
+  left:5px;
+  height:35%;
+}
+
+
+/*=====  End of Banner   ======*/
+
+
 
 
 

@@ -1,4 +1,12 @@
+<?php
+/*
+Template Name: Page des projets
+*/
+?>
+
+
 <?php get_header(); ?>
+
 <?php $author = get_field('author');
  $img1 = get_field('img-1');
  $img2 = get_field('img-2');
@@ -49,7 +57,20 @@ background-image:url('.$img1.');
           <h2 class=''><?= $author ?></h2>
         </div>
         <div class="col-11 col-md-8 col-lg-8 text-center">
-          <p><?= $text ?></p>
+          <p>Baby&#39;hello est un dispositif de diagnostic in vitro portable, peu invasif, rapide et fiable,
+            permettant de diagnostiquer la jaunisse simplement chez le nourrisson né à terme ou
+            prématurément. Ce dispositif médical s&#39;adresse aux infirmières, et professionnels de santé, et
+            leur permet de mesurer le taux de bilirubine, le pigment jaune responsable de la pathologie.
+            Il a pour avantage d&#39;être moins douloureux et plus fiable que les techniques actuelles,
+            notamment chez le prématuré.</br>
+            Avancement
+            Un prototype fonctionnel est en cours d&#39;élaboration, la technologie interne est en cours de
+            validation (deux technologies d&#39;analyse sont à étudier).
+            Les fonctionnalités du dispositif sont définies, et restent à confirmer avec des études auprès
+            d’utilisateurs potentiels (en cours)
+            Un business model canvas a été renseigné, un business plan est débuté, et une étude de
+            marché ainsi qu&#39;un prévisionnel financier à 3/5 ans ont été réalisé. Ils restent à affiner.
+            Le projet se situe entre les niveaux 3 et 4 de l’échelle TRL</p>
         </div>
       </div>
 
@@ -58,20 +79,23 @@ background-image:url('.$img1.');
 </div>
 
 <div class="container-fluid mt-4">
-  <div class="row align-items-center justify-content-start">
-    <div class="col-12 col-md-7 col-lg-7 echelle-trl order-2 order-md-1">
+  <div class="row align-items-center">
+    <div class="col-7 echelle-trl">
     </div>
-    <div class="col-12 col-md-3 col-lg-3 text-center order-1 order-md-2 ">
-      <h2 class="t1 red"> Niveau TRL</h2>
+    <div class="col-3 text-center ">
+      <h2> Niveau TRL</h2>
     </div>
   </div>
 </div>
 
-<div class="container-fluid search mt-2 mb-4">
+<div class="container-fluid search mt-4 mb-4">
 <div class="row justify-content-center">
 <div class="col-12 col-md-2 col-lg-2">
 <h3 class="white"> A la recherche de :</h3></div>
-<div class="col-8 col-md-10 white "><p><?= $search ?></p></div></div></div>
+<div class="col-8 col-md-10 white "><p>à la recherche de fonds pour financer la partie r&d du projet, ou de stagiaires souhaitant
+participer au développement d’un dispositif médical de diagnostic in vitro innovant,
+particulièrement sur la conception du système optique d’analyse sanguin et l’électronique du
+dispositif.</p></div></div></div>
 
 <style>
   <?php $tri=get_field('tri');
@@ -102,17 +126,11 @@ break;
 .search{
   padding-top: 20px;
   padding-bottom: 20px;
-  background:#E0272B;
-}
-
-.search:nth-child(odd){
   background:#303030;
 }
 
   .echelle-trl {
-    left:0%;
-    position:relative;
-    height:76px;
+    height: 150px;
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
@@ -139,8 +157,5 @@ break;
 <?php endif; ?>
 
 
-
-
-
-
-<?php get_footer(); ?>c
+    
+<?php get_footer(); ?>
