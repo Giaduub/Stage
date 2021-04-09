@@ -54,8 +54,10 @@ font-size: 3vh;
 }
 
 .t2{
-
+  font-size: 2vh;
 }
+
+
 
 .white{
     color: white;
@@ -96,7 +98,6 @@ border-top: 4px solid black;
 =============================================*/
 .bord-title{
   border-top: 1.2mm solid rgb(255, 255, 255, 1);
-  border-radius:5% 5% 5% 5%;
 }
 
 .fond-page{

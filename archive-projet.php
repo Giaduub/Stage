@@ -5,157 +5,128 @@ Template Name: Page des projets
 ?>
 
 
-<?php get_header(); ?>
+
+<?php get_header();?>
+<div class="col-sm-12 col-md-12 col-lg-12  ">
+  <div class="banner-top"><img src="<?= get_template_directory_uri()?>/img/haut-img.png" alt=""></div>  
+  <div class="row justify-content-center align-items-center fond-page">
+  <div class="banner-middle ">
+  
+    <h2 class='text-center mb-2 ubuntubold white bord-title'> <?= wp_title() ?> </h2></div>
+  </div>
+  <div class="raid-bottom"><img src="<?= get_template_directory_uri()?>/img/bas-img.png" alt=""></div>
+</div>
+
+<?php $loop = new WP_Query( array( 'post_type' => 'projet', 'posts_per_page' => '10' ) ); ?>
+<?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
 
 <?php $author = get_field('author');
  $img1 = get_field('img-1');
  $img2 = get_field('img-2');
  $text = get_field('text-1');
  $search = get_field('search');
+ $tri = get_field('tri');
+ 
  ?>
 
-<?php if (have_posts()) : ?>
-<?php while (have_posts()) : the_post(); ?>
 
 
-
-
-
-
-
-<div class="container-fluid">
-  <div class="row">
-    <div class="col-5 col-md-4">
-      <h3 class=''><?php the_date(); ?></h3>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-12 col-md-6 col-lg-6 ">
-    <div class="row justify-content-center ">
-      <div class="col-12 col-md-6 image-square">
-      </div>
-      
-      <style>
-  <?php $img1=get_field('img-1');
-  echo '.image-square{
-    height:500px;
-background-image:url('.$img1.');
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position:center;
-  }
-  '
-?>
-</style>
-    </div></div>
-    <div class="col-12 col-md-6 col-lg-6">
-      <div class="row align-items-center">
-        <div class="col-7 col-md-6 col-lg-6">
-          <h1 class="text-center post-title"><?php the_title(); ?></h1>
-        </div>
-        <div class="col-5 col-md-6 col-lg-6">
-          <h2 class=''><?= $author ?></h2>
-        </div>
-        <div class="col-11 col-md-8 col-lg-8 text-center">
-          <p>Baby&#39;hello est un dispositif de diagnostic in vitro portable, peu invasif, rapide et fiable,
-            permettant de diagnostiquer la jaunisse simplement chez le nourrisson né à terme ou
-            prématurément. Ce dispositif médical s&#39;adresse aux infirmières, et professionnels de santé, et
-            leur permet de mesurer le taux de bilirubine, le pigment jaune responsable de la pathologie.
-            Il a pour avantage d&#39;être moins douloureux et plus fiable que les techniques actuelles,
-            notamment chez le prématuré.</br>
-            Avancement
-            Un prototype fonctionnel est en cours d&#39;élaboration, la technologie interne est en cours de
-            validation (deux technologies d&#39;analyse sont à étudier).
-            Les fonctionnalités du dispositif sont définies, et restent à confirmer avec des études auprès
-            d’utilisateurs potentiels (en cours)
-            Un business model canvas a été renseigné, un business plan est débuté, et une étude de
-            marché ainsi qu&#39;un prévisionnel financier à 3/5 ans ont été réalisé. Ils restent à affiner.
-            Le projet se situe entre les niveaux 3 et 4 de l’échelle TRL</p>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</div>
+<?php $the_content = apply_filters('the_content', get_the_content()); ?>
 
 <div class="container-fluid mt-4">
-  <div class="row align-items-center">
-    <div class="col-7 echelle-trl">
-    </div>
-    <div class="col-3 text-center ">
-      <h2> Niveau TRL</h2>
-    </div>
-  </div>
+<h3>Publié le <?= the_date() ?></h3>
 </div>
 
-<div class="container-fluid search mt-4 mb-4">
-<div class="row justify-content-center">
-<div class="col-12 col-md-2 col-lg-2">
-<h3 class="white"> A la recherche de :</h3></div>
-<div class="col-8 col-md-10 white "><p>à la recherche de fonds pour financer la partie r&d du projet, ou de stagiaires souhaitant
-participer au développement d’un dispositif médical de diagnostic in vitro innovant,
-particulièrement sur la conception du système optique d’analyse sanguin et l’électronique du
-dispositif.</p></div></div></div>
+<?php 
+
+echo '
+<div class="container-fluid">
+        <div class="row justify-content-between">
+            <div class="col-12 col-md-5 p-0">
+                <img src="'.$img1.'" class="img-fluid" alt="">
+            </div>
+            <div class="col-12 col-md-6">
+                <div class="row align-items-center">
+                    <div class="col-12 col-md-12 col-lg-6">
+                        <h1 class="red">'.get_the_title().'</h1>
+                    </div>
+                    <div class="col-12 col-md-12 col-lg-6">
+                       <h2 class="t2">'.$author.'</h2> 
+                    </div>
+                    <div class="col-12 mt-4">
+                        <p class="ubuntubold">'.$text.'</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid">
+        <div class="row align-items-center">
+            <div class="col-12 p-0 order-2 order-md-1">
+                ';
+ 
+               switch ($tri) {
+                 case "0":
+                   echo ' <img src="'.get_template_directory_uri().'/img/tri-0.jpg" alt="" class="img-fluid">';
+                   break;
+                 case "1":
+                   echo ' <img src="'.get_template_directory_uri().'/img/tri-1.jpg" alt="" class="img-fluid">';
+                   break;
+                 case "2":
+                   echo ' <img src="'.get_template_directory_uri().'/img/tri-2.jpg" alt="" class="img-fluid">';
+                   break;
+                   case "3":
+                     echo ' <img src="'.get_template_directory_uri().'/img/tri-3.jpg" alt="" class="img-fluid">';
+                     break;
+                     case "4":
+                       echo ' <img src="'.get_template_directory_uri().'/img/tri-4.jpg" alt="" class="img-fluid">';
+                       break;
+                       case "5":
+                         echo ' <img src="'.get_template_directory_uri().'/img/tri-5.jpg" alt="" class="img-fluid">';
+                         break;
+                         case "6":
+                           echo ' <img src="'.get_template_directory_uri().'/img/tri-6.jpg" alt="" class="img-fluid">';
+                           break;
+                           case "7":
+                             echo ' <img src="'.get_template_directory_uri().'/img/tri-7.jpg" alt="" class="img-fluid">';
+                             break;
+                             case "8":
+                               echo ' <img src="'.get_template_directory_uri().'/img/tri-8.jpg" alt="" class="img-fluid">';
+                               break;
+                               case "9":
+                                 echo ' <img src="'.get_template_directory_uri().'/img/tri-9.jpg" alt="" class="img-fluid">';
+                                 break;
+                 default:
+                   echo "Erreur, il n'existe pas";
+               }
+             echo   '</div>
+            <div class="col-12 col-md-2 red order-1 order-md-2 text-center"></div>
+        </div>
+    </div>
+
+    <div class="container-fluid mt-4 mb-4 search">
+        <div class="row">
+            <div class="col-12 col-md-3">
+                <p class="ubuntubold">A la recherche de</p>
+            </div>
+            <div class="col-12 col-md-9"><p>'.$search.'</p></div>
+        </div>
+    </div>
+ ';
+?>
+
+
+<?php endwhile; wp_reset_query(); ?>
 
 <style>
-  <?php $tri=get_field('tri');
-
-  switch ($tri) {
-    case "0": echo ".echelle-trl{
-background-position: top;
-    background-image: url('".get_template_directory_uri()."/img/tri-0.jpg');
-  }
-
-  ";
-break;
-  case "1": echo "C'est 1";
-  break;
-  case "green": echo "Your favorite color is green!";
-  break;
-  default: echo "Your favorite color is";
-  }
-
-  ?>
-</style>
-
-<style>
-.img-square{
-  height:500px;
-  max-width: 98%;
-}
 .search{
-  padding-top: 20px;
-  padding-bottom: 20px;
-  background:#303030;
-}
-
-  .echelle-trl {
-    height: 150px;
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center;
-  }
-
-
-
-  .post-title {
-    color: #E0272B;
-  }
-
-  h3 {
-    font-size: 20px;
-  }
-
-
-  h2 {
-    font-size: 15px;
-  }
+            padding-top: 20px;
+            padding-bottom: 20px;
+            color:white;
+            background:#303030;
+        }
+        
 </style>
 
-
-<?php endwhile; ?>
-<?php endif; ?>
-
-
-    
-<?php get_footer(); ?>
+<?php get_footer();?>
