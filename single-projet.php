@@ -10,10 +10,10 @@
 <?php while (have_posts()) : the_post(); ?>
 
 
-<div class="container-fluid">
+<div class="container">
         <h3>Publié le <?= the_date()?></h3>
     </div>
-    <div class="container-fluid">
+    <div class="container">
         <div class="row justify-content-between">
             <div class="col-12 col-md-5 p-0">
                 <img src="<?= $img1?>" class="img-fluid" alt="">
@@ -34,7 +34,7 @@
         </div>
     </div>
 
-    <div class="container-fluid">
+    <div class="container">
         <div class="row align-items-center">
             <div class="col-12 col-md-10 p-0 order-2 order-md-1">
                 <?= $tri ?>   
@@ -81,7 +81,7 @@ switch ($tri) {
         </div>
     </div>
 
-    <div class="container-fluid mt-4 mb-4 search">
+    <div class="container mt-4 mb-4 search">
         <div class="row">
             <div class="col-3">
                 <p class='ubuntubold'>A la recherche de</p>
@@ -106,6 +106,7 @@ switch ($tri) {
             padding-bottom: 20px;
             background:#303030;
             color:white;
+            border-radius: 5px;
         }
         
 .search:nth-child(odd){

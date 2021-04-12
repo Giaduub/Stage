@@ -3,11 +3,6 @@
 <?php get_header(); ?>
 
 
-<?php 
- $img1 = get_field('img-1');
- $text = get_field('text-1');
- ?>
-
 <div class="container-fluid">
   <div class="row align-self-stretch">
 
@@ -27,18 +22,21 @@
     <!-- end first box -->
 
     <!-- Second box - Slider  -->
-    <div class="col-sm-12 col-md-12 col-lg-6 box2">
+    <div class="col-sm-12 col-md-12 col-lg-6 ">
     <!-- Slideshow container -->
-
 <div class="slideshow-container">
 
+
 <!-- Full-width images with number and caption text -->
-<div class="mySlides fade">    
+   
 <?php $loop = new WP_Query( array( 'post_type' => 'projet', 'posts_per_page' => '10' ) ); ?>
 <?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
 <?php $the_content = apply_filters('the_content', get_the_content()); ?>
-
-  <div class="numbertext">1 / 3</div>
+<?php 
+ $img1 = get_field('img-1');
+ ?>
+ 
+ <div class="mySlides fade"> 
   <?php echo '<img src="'.$img1.'" class="img-fluid" alt="">' ?>
   <div class="text"><?= the_title();?></div>
 </div>
@@ -62,14 +60,24 @@
 
 
 <style>
-* {box-sizing:border-box}
 
 /* Slideshow container */
 .slideshow-container {
-  max-width: 1000px;
+  height:100%;
+  width:100%;
   position: relative;
-  margin: auto;
+  overflow:hidden;
 }
+
+.slideshow-container img{
+  width:auto;
+position:absolute;
+top :50%; left :50%; 
+transform:translate(-50%; -50%);
+height:100%;
+}
+
+
 
 /* Hide the images by default */
 .mySlides {

@@ -7,15 +7,19 @@ Template Name: Page des projets
 
 
 <?php get_header();?>
+
+<!-- Banner -->
 <div class="col-sm-12 col-md-12 col-lg-12  ">
-  <div class="banner-top"><img src="<?= get_template_directory_uri()?>/img/haut-img.png" alt=""></div>  
+  <div class="banner-top"><img src="<?= get_template_directory_uri()?>/img/haut-img.png" alt=""></div>
   <div class="row justify-content-center align-items-center fond-page">
-  <div class="banner-middle ">
-  
-    <h2 class='text-center mb-2 ubuntubold white bord-title'> <?= wp_title() ?> </h2></div>
+    <div class="banner-middle ">
+
+      <h2 class='text-center mb-2 ubuntubold white bord-title'> <?= wp_title() ?> </h2>
+    </div>
   </div>
   <div class="raid-bottom"><img src="<?= get_template_directory_uri()?>/img/bas-img.png" alt=""></div>
 </div>
+<!-- End -->
 
 <?php $loop = new WP_Query( array( 'post_type' => 'projet', 'posts_per_page' => '10' ) ); ?>
 <?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
@@ -33,38 +37,36 @@ Template Name: Page des projets
 
 <?php $the_content = apply_filters('the_content', get_the_content()); ?>
 
-<div class="container-fluid mt-4">
-<h3>Publié le <?= the_date() ?></h3>
+<div class="container mt-4">
+  <h3>Publié le <?= the_date() ?></h3>
 </div>
 
-<?php 
 
-echo '
-<div class="container-fluid">
-        <div class="row justify-content-between">
-            <div class="col-12 col-md-5 p-0">
-                <img src="'.$img1.'" class="img-fluid" alt="">
-            </div>
-            <div class="col-12 col-md-6">
-                <div class="row align-items-center">
-                    <div class="col-12 col-md-12 col-lg-6">
-                        <h1 class="red">'.get_the_title().'</h1>
-                    </div>
-                    <div class="col-12 col-md-12 col-lg-6">
-                       <h2 class="t2">'.$author.'</h2> 
-                    </div>
-                    <div class="col-12 mt-4">
-                        <p class="ubuntubold">'.$text.'</p>
-                    </div>
-                </div>
-            </div>
-        </div>
+<div class="container">
+  <div class="row justify-content-between">
+    <div class="col-12 col-md-5 p-0">
+      <img src="<?= $img1 ?>" class="img-fluid" alt="">
     </div>
+    <div class="col-12 col-md-6">
+      <div class="row align-items-center">
+        <div class="col-12 col-md-12 col-lg-6">
+          <h1 class="red"><?= get_the_title()?></h1>
+        </div>
+        <div class="col-12 col-md-12 col-lg-6">
+          <h2 class="t2"><?= $author ?></h2>
+        </div>
+        <div class="col-12 mt-4">
+          <p class=""><?= $text ?></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
-    <div class="container-fluid">
-        <div class="row align-items-center">
-            <div class="col-12 p-0 order-2 order-md-1">
-                ';
+<div class="container">
+  <div class="row align-items-center">
+    <div class="col-12 p-0 order-2 order-md-1">
+      <?php 
  
                switch ($tri) {
                  case "0":
@@ -99,34 +101,33 @@ echo '
                                  break;
                  default:
                    echo "Erreur, il n'existe pas";
-               }
-             echo   '</div>
-            <div class="col-12 col-md-2 red order-1 order-md-2 text-center"></div>
-        </div>
+               } ?>
     </div>
+    <div class="col-12 col-md-2 red order-1 order-md-2 text-center"></div>
+  </div>
+</div>
 
-    <div class="container-fluid mt-4 mb-4 search">
-        <div class="row">
-            <div class="col-12 col-md-3">
-                <p class="ubuntubold">A la recherche de</p>
-            </div>
-            <div class="col-12 col-md-9"><p>'.$search.'</p></div>
-        </div>
+<div class="container mt-4 mb-4 search">
+  <div class="row">
+    <div class="col-12 col-md-3">
+      <p class="ubuntubold">A la recherche de</p>
     </div>
- ';
-?>
+    <div class="col-12 col-md-9">
+      <p><?= $search ?></p>
+    </div>
+  </div>
+</div>
 
 
 <?php endwhile; wp_reset_query(); ?>
 
 <style>
-.search{
-            padding-top: 20px;
-            padding-bottom: 20px;
-            color:white;
-            background:#303030;
-        }
-        
+  .search {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    color: white;
+    background: #303030;
+  }
 </style>
 
 <?php get_footer();?>
