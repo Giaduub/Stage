@@ -19,14 +19,16 @@
   </head>
   <body>
 
-
-  <div class="topnav" id="myTopnav">
-    
-  <a href="#home" class="active">Home</a>
-  <?php
+  <nav class="navbar">
+    <span class="navbar-toggle" id="js-navbar-toggle">
+            <i class="fas fa-bars"></i>
+        </span>
+    <a href="#" class="logo">logo</a>
+    <ul class="main-nav" id="js-menu">
+    <?php
           wp_nav_menu( array(
-          'container' =>'nav',
-          'class' =>'bangers',
+          'container' =>'',
+          'class' =>'',
           'theme_location' => '',
           'menu_id' => '',
           'echo' => true,
@@ -39,140 +41,95 @@
           'walker' => '')
           );
           ?>
-          <li id="menu-item-230"class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2030">
-  <a href="javascript:void(0);" class="icon" onclick="myFunction()"></li>
-    <i class="fa fa-bars"></i>
-  </a>
-</div>
+    </ul>
+  </nav>
+  
 
+  
+ 
   
 
 
 <style>
-.topnav li{
-  list-style: none;
-}
-.topnav a{
-  color:black!important;
 
-}
- /* Effect 1: Brackets */
- .topnav li::before,
-  .topnav li::after {
-	display: inline-block;
-	opacity: 0;
-	-webkit-transition: -webkit-transform 0.3s, opacity 0.2s;
-	-moz-transition: -moz-transform 0.3s, opacity 0.2s;
-	transition: transform 0.3s, opacity 0.2s;
+.navbar {
+  font-size: 18px;
+  background-image: linear-gradient(260deg, #2376ae 0%, #c16ecf 100%);
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  padding-bottom: 10px;
 }
 
-.topnav li::before {
-	margin-right: 10px;
-	content: '[';
-  color: #E0272B;
-	-webkit-transform: translateX(20px);
-	-moz-transform: translateX(20px);
-	transform: translateX(20px);
-}
-
-.topnav li::after {
-	margin-left: 10px;
-	content: ']';
-  color: #E0272B;
-	-webkit-transform: translateX(-20px);
-	-moz-transform: translateX(-20px);
-	transform: translateX(-20px);
-}
-
-.topnav li:hover::before,
-.topnav li:hover::after,
-.topnav li:focus::before,
-.topnav li:focus::after {
-	opacity: 1;
-	-webkit-transform: translateX(0px);
-	-moz-transform: translateX(0px);
-	transform: translateX(0px);
-}
-
-
-
-/* Add a black background color to the top navigation */
-.topnav {
-  background-color: white;
-  position: sticky;
-  top:0.000001%;
-  overflow: hidden;
-  z-index: 9999;
-}
-
-/* Style the links inside the navigation bar */
-.topnav .active {
-  float: left;
-  display: block;
-  color: white!important;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 17px;
-  
-}
-.topnav li {
-  float: right;
-  display: block;
-  color: black;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 17px;
-  
-}
-
-
-/* Change the color of links on hover */
-.topnav li:hover {
-  background-color: #ddd;
-
-}
-
-
-
-.topnav li>a:hover{
-  color:#E0272B!important;
-}
-
-/* Add an active class to highlight the current page */
-.topnav a.active li.active {
-  background-color: #E0272B;
-  color: white;
-}
-
-/* Hide the link that should open and close the topnav on small screens */
-.topnav .icon {
+.main-nav {
+  list-style-type: none;
   display: none;
-  color: #E0272B;
-}
-/* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
-@media screen and (max-width: 600px) {
-  .topnav li:not(:first-child) {display: none;}
-  .topnav li.icon {
-    float: right;
-    display: block;
-  }
 }
 
-/* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
-@media screen and (max-width: 600px) {
-  .topnav.responsive {position: sticky;}
-  .topnav.responsive li.icon {
-    position: sticky;
-  top:0.000001%;
-    right: 0;
-    top: 0;
+.nav-links,
+.logo {
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.main-nav li {
+  text-align: center;
+  margin: 15px auto;
+}
+
+.logo {
+  display: inline-block;
+  font-size: 22px;
+  margin-top: 10px;
+  margin-left: 20px;
+}
+
+.navbar-toggle {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  cursor: pointer;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 24px;
+}
+
+.active {
+  display: block;
+}
+
+@media screen and (min-width: 768px) {
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 0;
+    height: 70px;
+    align-items: center;
   }
-  .topnav.responsive li {
-    float: none;
-    display: block;
-    text-align: left;
+
+  .main-nav {
+    display: flex;
+    margin-right: 30px;
+    flex-direction: row;
+    justify-content: flex-end;
+  }
+
+  .main-nav li {
+    margin: 0;
+  }
+
+  .nav-links {
+    margin-left: 40px;
+  }
+
+  .logo {
+    margin-top: 0;
+  }
+
+  .navbar-toggle {
+    display: none;
+  }
+
+  .logo:hover,
+  .nav-links:hover {
+    color: rgba(255, 255, 255, 1);
   }
 }
 

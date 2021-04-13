@@ -1,23 +1,24 @@
 <?php /* Template Name: page faq*/ ?>
 
 <?php get_header(); ?>
-
+<?php $stringx = get_the_title(); ?>
 <?php $raiponce = get_field('lesquestions');?>
 
 
 
 <section class="faq">
 
-<div class="col-sm-12 col-md-12 col-lg-12  ">
-  <div class="banner-top"><img src="<?= get_template_directory_uri()?>/img/haut-img.png" alt=""></div>  
-  <div class="row justify-content-center align-items-center fond-page">
-  <div class="banner-middle ">
-  
-    <h2 class='text-center mb-2 ubuntubold white bord-title'> <?=wp_title() ?> </h2></div>
-    
-  </div>
-  <div class="raid-bottom"><img src="<?= get_template_directory_uri()?>/img/bas-img.png" alt=""></div>
-</div>
+    <div class="col-sm-12 col-md-12 col-lg-12  ">
+        <div class="banner-top"><img src="<?= get_template_directory_uri()?>/img/haut-img.png" alt=""></div>
+        <div class="row justify-content-center align-items-center fond-page">
+            <div class="banner-middle ">
+                <hr class="top-line-banner">
+                <h2 class='text-center t3 mb-2 ubuntubold white'> <?php echo preg_replace('/-[^-]*$/', '', $stringx); ?>
+                </h2>
+            </div>
+        </div>
+        <div class="raid-bottom"><img src="<?= get_template_directory_uri()?>/img/bas-img.png" alt=""></div>
+    </div>
 
     <div class="container mt-4 mb-4">
         <div class="row">

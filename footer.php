@@ -15,7 +15,7 @@
             <a href="<?= site_url()."";?>">Accueil</a>
             </div>
             <div class="col-sm-12 col-md-2 col-lg-2">
-            <a href="<?= site_url()."/contact";?>">Contact</a>
+            <a href="<?= site_url()."/contact";?>">Mentions légales</a>
             </div>
             <div class="col-sm-12 col-md-2 col-lg-2">
                 <a href="<?= site_url()."/politique-de-confidentialite";?>">Politique de confidentialité</a>

@@ -4,24 +4,25 @@ Template Name: Page des projets
 */
 ?>
 
-
+<?php $stringx = get_the_title();?>
 
 <?php get_header();?>
 
 <!-- Banner -->
 <div class="col-sm-12 col-md-12 col-lg-12  ">
-  <div class="banner-top"><img src="<?= get_template_directory_uri()?>/img/haut-img.png" alt=""></div>
-  <div class="row justify-content-center align-items-center fond-page">
-    <div class="banner-middle ">
-
-      <h2 class='text-center mb-2 ubuntubold white bord-title'> <?= wp_title() ?> </h2>
+        <div class="banner-top"><img src="<?= get_template_directory_uri()?>/img/haut-img.png" alt=""></div>
+        <div class="row justify-content-center align-items-center fond-page">
+            <div class="banner-middle ">
+                <hr class="top-line-banner">
+                <h2 class='text-center t3 mb-2 ubuntubold white'> <?php echo preg_replace('/-[^-]*$/', '', $stringx); ?>
+                </h2>
+            </div>
+        </div>
+        <div class="raid-bottom"><img src="<?= get_template_directory_uri()?>/img/bas-img.png" alt=""></div>
     </div>
-  </div>
-  <div class="raid-bottom"><img src="<?= get_template_directory_uri()?>/img/bas-img.png" alt=""></div>
-</div>
 <!-- End -->
 
-<?php $loop = new WP_Query( array( 'post_type' => 'projet', 'posts_per_page' => '10' ) ); ?>
+<?php $loop = new WP_Query( array( 'post_type' => 'projet', 'posts_per_page' => '15' ) ); ?>
 <?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
 
 <?php $author = get_field('author');
@@ -120,14 +121,5 @@ Template Name: Page des projets
 
 
 <?php endwhile; wp_reset_query(); ?>
-
-<style>
-  .search {
-    padding-top: 20px;
-    padding-bottom: 20px;
-    color: white;
-    background: #303030;
-  }
-</style>
 
 <?php get_footer();?>

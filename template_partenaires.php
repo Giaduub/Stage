@@ -3,20 +3,23 @@
 <?php get_header(); ?>
 
 <?php $sponso = get_field('sponsor'); 
+$partner = get_field('partenaire');
 $today = date("Y"); 
-$raiponce = get_field('lesquestions');?>
+$raiponce = get_field('lesquestions');
+$stringx = get_the_title(); ?>
 
 <!-- Banner -->
 <div class="col-sm-12 col-md-12 col-lg-12  ">
-  <div class="banner-top"><img src="<?= get_template_directory_uri()?>/img/haut-img.png" alt=""></div>  
-  <div class="row justify-content-center align-items-center fond-page">
-  <div class="banner-middle ">
-  
-    <h2 class='text-center mb-2 ubuntubold white bord-title'> <?=wp_title() ?> </h2></div>
-    
-  </div>
-  <div class="raid-bottom"><img src="<?= get_template_directory_uri()?>/img/bas-img.png" alt=""></div>
-</div>
+        <div class="banner-top"><img src="<?= get_template_directory_uri()?>/img/haut-img.png" alt=""></div>
+        <div class="row justify-content-center align-items-center fond-page">
+            <div class="banner-middle ">
+                <hr class="top-line-banner">
+                <h2 class='text-center t3 mb-2 ubuntubold white'> <?php echo preg_replace('/-[^-]*$/', '', $stringx); ?>
+                </h2>
+            </div>
+        </div>
+        <div class="raid-bottom"><img src="<?= get_template_directory_uri()?>/img/bas-img.png" alt=""></div>
+    </div>
 <!-- End Banner -->
 
 
@@ -32,7 +35,7 @@ $raiponce = get_field('lesquestions');?>
   <div class="row justify-content-center text-center mt-4">
       <?php for ($i=0; $i < count($sponso); $i++){
      echo ' <div class="col-6 col-md-4 col-lg-3 mt-4 p-0">
-     <img src="'.$sponso[$i]['sponso-img'].'" class="img-fluid" alt="'.$sponso[$i]['description-logo'].'" style="width= 150px height=58px">
+     <img src="'.$sponso[$i]['sponso-img'].'" class="img-fluid" alt="'.$sponso[$i]['description-logo'].'"width="150" height="58">
      </div>';
    }?>
       
@@ -51,9 +54,9 @@ $raiponce = get_field('lesquestions');?>
 </div>
 </div>
   <div class="row justify-content-center text-center mt-4">
-      <?php for ($i=0; $i < count($sponso); $i++){
+  <?php for ($i=0; $i < count($partner); $i++){
      echo ' <div class="col-6 col-md-4 col-lg-3 mt-4 p-0">
-     <img src="'.$sponso[$i]['sponso-img'].'" class="img-fluid" alt="'.$sponso[$i]['description-logo'].'" style="width= 150px height=58px">
+     <img src="'.$partner[$i]['img-partner'].'" class="img-fluid" alt="'.$partner[$i]['description-partn'].'"width="150" height="58">
      </div>';
    }?>
       
@@ -70,7 +73,7 @@ $raiponce = get_field('lesquestions');?>
  <div class="row">
  <?php for ($i=0; $i < count($raiponce); $i++){
      echo '
-     <div class="col-12 col-md-6 col-lg-6"><button type="button" class="collapsible cross ubuntubold mt-4">'.$raiponce[$i]['question'].'</button>
+     <div class="col-12 col-md-6 col-lg-6"><button type="button" class="text-center collapsible cross ubuntubold mt-4">'.$raiponce[$i]['question'].'</button>
      <div class="content">
      <p>'.$raiponce[$i]['reponse'].'</p></div></div>';
    }?>

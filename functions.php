@@ -58,6 +58,72 @@ function wpm_custom_post_type() {
 add_action( 'init', 'wpm_custom_post_type', 0 );
 
 
+function evenement_custom_post() {
+
+	// On rentre les différentes dénominations de notre custom post type qui seront affichées dans l'administration
+	$labels = array(
+		// Le nom au pluriel
+		'name'                => _x( 'Evenements', 'Post Type General Name'),
+		// Le nom au singulier
+		'singular_name'       => _x( 'Evenement', 'Post Type Singular Name'),
+		// Le libellé affiché dans le menu
+		'menu_name'           => __( 'Evenement'),
+		// Les différents libellés de l'administration
+		'all_items'           => __( 'Tous les evenements'),
+		'view_item'           => __( 'Voir les evenements'),
+		'add_new_item'        => __( 'Ajouter un nouveau evenement'),
+		'add_new'             => __( 'Ajouter un evenement'),
+		'edit_item'           => __( 'Editer un evenement'),
+		'update_item'         => __( 'Modifier le evenement'),
+		'search_items'        => __( 'Rechercher un evenement'),
+		'not_found'           => __( 'Non trouvée'),
+		'not_found_in_trash'  => __( 'Non trouvée dans la corbeille'),
+		'featured_image'        => __( 'Featured Image', 'text_domain' ),
+        'set_featured_image'    => __( 'Set featured image', 'text_domain' ),
+        'remove_featured_image' => __( 'Remove featured image', 'text_domain' ),
+        'use_featured_image'    => __( 'Use as featured image', 'text_domain' ),
+        'insert_into_item'      => __( 'Insert into item', 'text_domain' ),
+        'uploaded_to_this_item' => __( 'Uploaded to this item', 'text_domain' ),
+        'items_list'            => __( 'Items list', 'text_domain' ),
+        'items_list_navigation' => __( 'Items list navigation', 'text_domain' ),
+        'filter_items_list'     => __( 'Filter items list', 'text_domain' ),
+	);
+	
+	// On peut définir ici d'autres options pour notre custom post type
+	
+	$args = array(
+		'label'               => __( 'Evenements'),
+		'description'         => __( 'Tous sur evenements'),
+		'labels'              => $labels,
+		// On définit les options disponibles dans l'éditeur de notre custom post type ( un titre, un auteur...)
+		'supports'            => array( 'title', 'editor', 'slug', 'comments', 'thumbnail', 'revisions', 'custom-fields', ),
+		/* 
+		* Différentes options supplémentaires
+		*/
+		'show_in_rest'        => true,
+		'hierarchical'        => false,
+		'public'              => true,
+		'has_archive'         => true,
+		'rewrite'			  => array( 'slug' => 'evenement'),
+
+	);
+	
+	// On enregistre notre custom post type qu'on nomme ici "portfolio" et ses arguments
+	register_post_type( 'evenement', $args );
+
+}
+
+add_action( 'init', 'evenement_custom_post', 0 );
+
+/*
+ * Let WordPress manage the document title.
+ * By adding theme support, we declare that this theme does not use a
+ * hard-coded <title> tag in the document head, and expect WordPress to
+ * provide it for us.
+ */
+add_theme_support( 'title-tag' );
+
+
 
 function wpc_theme_support() {
     add_theme_support('custom-logo', array(
@@ -74,6 +140,8 @@ register_nav_menu( 'menufooter', 'Menu du Footer' );
 // on créé une zone pour le menu 
 register_nav_menu( 'menuheader', 'Menu du Header' );
 register_nav_menu( 'menufooter', 'Menu du Footer' );
+
+
 
 
 function header_widgets_init() {
