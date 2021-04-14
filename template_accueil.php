@@ -87,13 +87,88 @@ background-image:url('.$imgtop.');
 
 
 <!-- Agenda -->
-<div class="container-fluid">
-  <div class="row">
-    <div class="col-12 agenda">
-
+<div class="container-fluid agenda">
+  <div class="container-fluid">
+    <div class="row justify-content-center">
+      <div class="col-12 col-md-3">
+      <h2 class="white a-title t3 pt-2">Agenda</h2>
+      </div>
+      <div class="col-12 col-md-3">
+      
+      </div>
+      <div class="col-12 col-md-3">
+      
+      </div>
     </div>
   </div>
+  
+  <div class="row justify-content-center">
+  
+    <?php $event = new WP_Query( array( 'post_type' => 'evenement', 'posts_per_page' => '3' ) ); ?>
+    <?php while ( $event->have_posts() ) : $event->the_post(); ?>
+    <?php $the_content_event = apply_filters('the_content', get_the_content()); ?>
+
+    <?php $titleEvent = get_field('event-title'); 
+$date = get_field('date-title'); 
+$lieu = get_field('lieu');
+$imgEvent = get_field('img-event');
+$descEvent = get_field('description-event');
+?>
+
+
+    <div class="col-12 col-md-3 pt-4 pb-2">
+      <div class="card">
+        <img src="<?= $imgEvent ?>" alt="Avatar" style="width:100%">
+        <div class="container">
+          <h4 class="red"><b><?= $titleEvent ; ?></b></h4>
+          <p class="ubuntubold"> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-calendar-check" viewBox="0 0 16 16">
+  <path d="M10.854 7.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7.5 9.793l2.646-2.647a.5.5 0 0 1 .708 0z"/>
+  <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z"/>
+</svg> <?= $date ?></p>
+          <p class="ubuntubold"> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cursor-fill" viewBox="0 0 16 16">
+  <path d="M14.082 2.182a.5.5 0 0 1 .103.557L8.528 15.467a.5.5 0 0 1-.917-.007L5.57 10.694.803 8.652a.5.5 0 0 1-.006-.916l12.728-5.657a.5.5 0 0 1 .556.103z"/>
+</svg> <?= $lieu ?></p>
+          <a class="black ubuntubold" href="<?= site_url()."/nos-evenements";?>">En savoir plus...</a>
+        </div>
+      </div>
+    </div>
+
+    <?php endwhile; wp_reset_query(); ?>
+
+  </div>
 </div>
+
+<style>
+    .card {
+        /* Add shadows to create the "card" effect */
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        transition: 0.3s;
+    }
+
+    /* On mouse-over, add a deeper shadow */
+    .card:hover {
+        box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+    }
+
+    /* Add some padding inside the card container */
+    .container {
+        padding: 2px 16px;
+    }
+
+    .card {
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        transition: 0.3s;
+        border-radius: 5px;
+        /* 5px rounded corners */
+    }
+
+    /* Add rounded corners to the top left and the top right corner of the image */
+    img {
+        border-radius: 5px 5px 0 0;
+    }
+</style>
+
+
 <!-- end agenda  -->
 
 <!-- Sponsors -->

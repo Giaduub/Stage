@@ -1,5 +1,27 @@
 <?php 
 
+add_filter('wp_nav_menu_items', 'gkp_add_login_logout_link', 10, 2);
+function gkp_add_login_logout_link($items, $args) {
+
+    ob_start();
+    wp_loginout('index.php');
+    $loginout = ob_get_contents();
+    ob_end_clean();
+    $items .= '<li class="nav-links menu-item menu-item-type-post_type menu-item-object-page menu-item-209">'. $loginout .'</li>';
+    return $items;
+}
+
+// Rediriger les non-administrateurs vers la page d'accueil À partir de l'administration
+function wpm_admin_redirection() {
+	//Si on essaye d'accéder à L'administration Sans avoir le rôle administrateur
+	if ( is_admin() && ! current_user_can( 'administrator' ) ) {
+		// On redirige vers la page d'accueil
+		wp_redirect( home_url() );
+		exit;
+	}
+}
+add_action( 'init', 'wpm_admin_redirection' );
+
 function wpm_custom_post_type() {
 
 	// On rentre les différentes dénominations de notre custom post type qui seront affichées dans l'administration
@@ -133,6 +155,7 @@ function wpc_theme_support() {
     }
     add_action('after_setup_theme','wpc_theme_support');
 
+
 // on créé une zone pour le menu 
 register_nav_menu( 'menuheader', 'Menu du Header' );
 register_nav_menu( 'menufooter', 'Menu du Footer' );
@@ -140,6 +163,8 @@ register_nav_menu( 'menufooter', 'Menu du Footer' );
 // on créé une zone pour le menu 
 register_nav_menu( 'menuheader', 'Menu du Header' );
 register_nav_menu( 'menufooter', 'Menu du Footer' );
+
+
 
 
 
