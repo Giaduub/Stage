@@ -1,5 +1,7 @@
 <?php 
 
+
+
 add_filter('wp_nav_menu_items', 'gkp_add_login_logout_link', 10, 2);
 function gkp_add_login_logout_link($items, $args) {
 
@@ -163,8 +165,6 @@ register_nav_menu( 'menufooter', 'Menu du Footer' );
 // on créé une zone pour le menu 
 register_nav_menu( 'menuheader', 'Menu du Header' );
 register_nav_menu( 'menufooter', 'Menu du Footer' );
-
-
 
 
 

@@ -20,11 +20,11 @@
   <body>
 
  
-  <nav class="navbar cl-effect-1">
+  <nav class="navbar-custom cl-effect-1">
   <?= the_custom_logo(); ?>
-  <div class="push-left">
+  <div class="push-left-custom">
 
-    <button id="menu-toggler" data-class="menu-active" class="hamburger">
+    <button id="menu-toggler-custom" data-class="menu-active-custom" class="hamburger-custom">
       <span class="hamburger-line hamburger-line-top"></span>
       <span class="hamburger-line hamburger-line-middle"></span>
       <span class="hamburger-line hamburger-line-bottom"></span>
@@ -57,21 +57,3 @@
   </div>
 </nav>
 
-
-  
- 
-  
-
-
-
-
-<script>
-// Toggle menu on click
-document.querySelector('#menu-toggler').addEventListener('click', (e) => {
-  toggleBodyClass('menu-active');
-});
-
-function toggleBodyClass(className) {
-  document.body.classList.toggle(className);
-}
-</script>
