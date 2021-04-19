@@ -37,7 +37,7 @@
       </li>
     <?php
           wp_nav_menu( array(
-          'container' =>'',
+          'container' =>false,
           'class' =>'',
           'theme_location' => '',
           'menu_id' => '',
