@@ -10,7 +10,7 @@
 <section class="faq">
 
     <div class="col-sm-12 col-md-12 col-lg-12  ">
-        <div class="banner-top"><img src="<?= get_template_directory_uri()?>/img/haut-img.png" alt=""></div>
+        <div class="banner-top"><img src="<?= get_template_directory_uri()?>/img/haut-img.png" alt="Corner blanc"></div>
         <div class="row justify-content-center align-items-center fond-page">
             <div class="banner-middle ">
                 <hr class="top-line-banner">
@@ -18,7 +18,7 @@
                 </h2>
             </div>
         </div>
-        <div class="raid-bottom"><img src="<?= get_template_directory_uri()?>/img/bas-img.png" alt=""></div>
+        <div class="raid-bottom"><img src="<?= get_template_directory_uri()?>/img/bas-img.png" alt="Corner blanc"></div>
     </div>
 
     <div class="container mt-4 mb-4">

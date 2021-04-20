@@ -15,7 +15,7 @@ $desc = get_field('description-event');
 
         <div class="col-12 pt-4 pb-2">
             <div class="card">
-                <img src="<?= $img ?>" alt="Avatar" style="width:100%">
+                <img src="<?= $img ?>" alt="Avatar <?= $title ?>" style="width:100%">
                 <div class="container">
                     <h4><b><?= $title ; ?></b></h4>
                     <p><?= $date ?></p>

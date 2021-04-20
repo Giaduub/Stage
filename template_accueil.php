@@ -35,7 +35,7 @@ background-image:url('.$imgtop.');
 
     <!-- First box -->
     <div class="col-sm-12 col-md-12 col-lg-12 col-xl-6 box1 ">
-      <div class="red-top"><img src="<?= get_template_directory_uri()?>/img/haut-img.png" alt=""></div>
+      <div class="red-top"><img src="<?= get_template_directory_uri()?>/img/haut-img.png" alt="Corner blanc"></div>
       <div class="red-middle ">
         <hr class="top-line-white ">
         <h2 class='text-center mb-2 ubuntubold white'> Qui sommes-nous ? </h2>
@@ -45,7 +45,7 @@ background-image:url('.$imgtop.');
           </div>
         </div>
       </div>
-      <div class="red-bottom"><img src="<?= get_template_directory_uri()?>/img/bas-img.png" alt=""></div>
+      <div class="red-bottom"><img src="<?= get_template_directory_uri()?>/img/bas-img.png" alt="Corner blanc"></div>
     </div>
 
     <!-- end first box -->
@@ -64,9 +64,9 @@ background-image:url('.$imgtop.');
         <?php $img1 = get_field('img-1'); ?>
 
         <div class="mySlides fadein">
-          <?php echo '<img src="'.$img1.'" class="img-fluid" alt="">' ?>
+          <?php echo '<img src="'.$img1.'" class="img-fluid" alt="'.get_the_title().'">' ?>
           <div class="text">
-            <h1><a href="<?= site_url()?>/nos-projets"><?= the_title();?></a></h1>
+            <h1><a href="<?= site_url()?>/nos-projets"><?= get_the_title();?></a></h1>
           </div>
         </div>
 
@@ -118,7 +118,7 @@ $descEvent = get_field('description-event');
 
     <div class="col-12 col-md-3 pt-4 pb-2">
       <div class="card">
-        <img src="<?= $imgEvent ?>" alt="Avatar" style="width:100%">
+        <img src="<?= $imgEvent ?>" alt="Avatar <?= $titleEvent?>" style="width:100%">
         <div class="container">
           <h4 class="red"><b><?= $titleEvent ; ?></b></h4>
           <p class="ubuntubold"> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-calendar-check" viewBox="0 0 16 16">

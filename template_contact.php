@@ -22,7 +22,7 @@ background-image:url('.$imgtop.');
     <!-- End -->
         <!-- Banner -->
         <div class="col-sm-12 col-md-12 col-lg-12  ">
-        <div class="banner-top"><img src="<?= get_template_directory_uri()?>/img/haut-img.png" alt=""></div>
+        <div class="banner-top"><img src="<?= get_template_directory_uri()?>/img/haut-img.png" alt="Corner blanc"></div>
         <div class="row justify-content-center align-items-center fond-page">
             <div class="banner-middle ">
                 <hr class="top-line-banner">
@@ -30,7 +30,7 @@ background-image:url('.$imgtop.');
                 </h2>
             </div>
         </div>
-        <div class="raid-bottom"><img src="<?= get_template_directory_uri()?>/img/bas-img.png" alt=""></div>
+        <div class="raid-bottom"><img src="<?= get_template_directory_uri()?>/img/bas-img.png" alt="Corner blanc"></div>
     </div>
             <!-- End -->
 
@@ -47,7 +47,7 @@ background-image:url('.$imgtop.');
                             </div>
                             <div class="row">
                                 <div class="col-12 col-md-6 col-lg-6">
-                                      <img src="<?= $contact ?>" class="img-fluid" alt="">
+                                      <img src="<?= $contact ?>" class="img-fluid" alt="Image Contact">
                                 </div>
                                 <div class="col-12 col-md-6 col-lg-6"><?php the_content();?></div>
                             </div>

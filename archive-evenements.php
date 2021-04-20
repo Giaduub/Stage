@@ -39,7 +39,7 @@ $desc = get_field('description-event');
 
 <div class="col-12 col-md-6 col-xl-4 pt-4 pb-2">
             <div class="card">
-                <img src="<?= $img ?>" alt="Avatar" style="width:100%">
+                <img src="<?= $img ?>" alt="Avatar <?= $title?>" style="width:100%">
                 <div class="container">
                     <h4 class="red"><b><?= $title ; ?></b></h4>
                     <p class="ubuntubold"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-calendar-check" viewBox="0 0 16 16">
