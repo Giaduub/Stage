@@ -771,14 +771,14 @@ footer{
 
 
 /*=============================================
-=            Cookie            =
+=            Copyright            =
 =============================================*/
 
-.cookie{
-  position:absolute;
+.copyright{
+  background:#303030;
 }
 
-/*=====  End of Cookie  ======*/
+/*=====  End of Copyright ======*/
 
 
 

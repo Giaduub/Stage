@@ -31,10 +31,6 @@
 </div>
 </div>
 
-<style>
-.copyright{
-    background:black;
-}</style>
 
 
 
