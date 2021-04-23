@@ -8,7 +8,7 @@
 
 
 <section class="faq">
-
+<!-- Bannière -->
     <div class="col-sm-12 col-md-12 col-lg-12  ">
         <div class="banner-top"><img src="<?= get_template_directory_uri()?>/img/haut-img.png" alt="Corner blanc"></div>
         <div class="row justify-content-center align-items-center fond-page">
@@ -20,7 +20,7 @@
         </div>
         <div class="raid-bottom"><img src="<?= get_template_directory_uri()?>/img/bas-img.png" alt="Corner blanc"></div>
     </div>
-
+<!-- End -->
     <div class="container mt-4 mb-4">
         <div class="row">
             <div class="col-10 text-center ubuntubold">
@@ -34,6 +34,7 @@
 
     <div class="container pb-4 mt-4">
         <div class="row">
+    <!-- Boucle Collapse -->
             <?php for ($i=0; $i < count($raiponce); $i++){
      echo '
      <div class="col-12"><button type="button" class="text-center collapsible cross ubuntubold">'.$raiponce[$i]['question'].'</button>
@@ -42,7 +43,7 @@
    }?>
         </div>
     </div>
-
+<!-- End -->
 </section>
 
 <?php get_footer(); ?>

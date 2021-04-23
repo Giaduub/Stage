@@ -6,7 +6,8 @@
 $partner = get_field('partenaire');
 $today = date("Y"); 
 $raiponce = get_field('lesquestions');
-$stringx = get_the_title(); ?>
+$stringx = get_the_title();
+$email = get_field('email'); ?>
 
 <!-- Banner -->
 <div class="col-sm-12 col-md-12 col-lg-12  ">
@@ -88,7 +89,7 @@ $stringx = get_the_title(); ?>
 <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ratione vel doloremque beatae soluta iste eius doloribus tempora a tenetur, eligendi ipsum assumenda sed velit repudiandae illo. Aperiam tenetur sequi maxime.</p></div></div>
 <div class="row justify-content-center">
 <div class="col-8 col-md-6 col-lg-4 mb-4">
-<button class="candidat"><a href="mailto:test@test.fr">Envoyer une candidature</button></div></div></div>
+<button class="candidat"><a href="mailto:<?= $email ?>">Envoyer une candidature</button></div></div></div>
 
 
 

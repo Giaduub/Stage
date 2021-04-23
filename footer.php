@@ -23,13 +23,7 @@
         </div>
     </div>
 </footer>
-<div class="container-fluid copyright">
-<div class="row justify-content-center">
-<div class="col-4 col-md-1">
-<p class="white"><a href="http://www.giannidubief.fr">Gianni Dubief ©</a> </p>
-</div>
-</div>
-</div>
+
 
 
 

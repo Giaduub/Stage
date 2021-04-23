@@ -86,7 +86,7 @@ switch ($tri) {
     <div class="col-12 col-md-3">
       <p class='ubuntubold'>A la recherche de</p>
     </div>
-    <div class="col-12">
+    <div class="col-12 col-md-9">
       <p><?= $search ?></p>
     </div>
   </div>
