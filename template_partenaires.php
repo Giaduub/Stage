@@ -7,7 +7,8 @@ $partner = get_field('partenaire');
 $today = date("Y"); 
 $raiponce = get_field('lesquestions');
 $stringx = get_the_title();
-$email = get_field('email'); ?>
+$email = get_field('email');
+$desc = get_field('desc-part'); ?>
 
 <!-- Banner -->
 <div class="col-sm-12 col-md-12 col-lg-12  ">
@@ -86,7 +87,7 @@ $email = get_field('email'); ?>
 <div class="container">
 <div class="row justify-content-center">
 <div class="col-11 mt-4 mb-4">
-<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ratione vel doloremque beatae soluta iste eius doloribus tempora a tenetur, eligendi ipsum assumenda sed velit repudiandae illo. Aperiam tenetur sequi maxime.</p></div></div>
+<p><?= $desc ?></p></div></div>
 <div class="row justify-content-center">
 <div class="col-8 col-md-6 col-lg-4 mb-4">
 <button class="candidat"><a href="mailto:<?= $email ?>">Envoyer une candidature</button></div></div></div>
